@@ -3,7 +3,7 @@ var body_parser = require('body-parser');
 var path = require('path');
 
 //Configure app
-var port = process.env.PORT || 1336;
+var port = process.env.PORT || 1339;
 var app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "views"));

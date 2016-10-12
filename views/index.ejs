@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>L2C</title>
+    <meta charset="UTF-8">
+    <title>LiveToCreate</title>
+    <link rel="stylesheet" href="./css/index-style.css">
+    <link rel="stylesheet" href="./css/pure-min.css">
+    <!--[if lte IE 8]>
+	<link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">
+	<![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="./css/grids-responsive-min.css">
+    <!--<![endif]-->
 </head>
+
 <body>
-	
+    <div class="menu-wrapper" id="menu">
+        <div class="pure-menu menu menu-top">
+            <a href="" class="pure-menu-heading menu-brand">L2C</a>
+            <div class="menu-toggle" id="toggle">
+                <s class="bar"></s>
+                <s class="bar"></s>
+            </div>
+        </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable menu menu-bottom menu-tucked" id="tuckedMenu">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">О НАС</a></li>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">УСЛУГИ</a></li>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">НАШИ РАБОТЫ</a></li>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">КОНТАКТЫ</a></li>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">ЗАКАЗАТЬ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="block-first">
+        <div class="white-area left"></div>
+        <div class="white-area right"></div>
+        <div class="white-area middle"></div>
+    </div>
+    <div id="block-second">
+        &nbsp;
+    </div>
+    <div id="block-third">
+        &nbsp;
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        if ($(window).width() < 992) {
+            $('#tuckedMenu').hide();
+        }
+
+        $(window).resize(function() {
+            if ($(window).width() < 992) {
+                $('#tuckedMenu').hide();
+            } else {
+                $('#tuckedMenu').show();
+            }
+        });
+
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > $(window).height() * 0.7) {
+                $("#menu").addClass('dark');
+            } else {
+                $("#menu").removeClass('dark');
+            }
+        });
+
+        $('#toggle').click(function() {
+            $('#tuckedMenu').toggle('display');
+            $('#tuckedMenu').toggleClass('menu-tucked');
+            $('#toggle').toggleClass('x');
+        });
+    });
+    </script>
 </body>
+
 </html>
