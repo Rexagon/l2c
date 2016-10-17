@@ -2,3 +2,39 @@
 	- переведём ваш бизнес в онлайн [и заставим его приносить прибыль]
 	- откроем [создадим] новый канал продаж
 	- сократим ваши расходы с помощью CRM системы
+
+
+	<div class="pure-u-1 about-item top">
+                    <div class="wrapper">
+                        <div class="text">
+                            <div class="item-title">Постоянсво</div>
+                            Готовы к длительному сотрудничеству. 24/7 на связи с Вами.
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-lg-1-3">
+                    <div class="about-item left">
+                        <div class="text">
+                            <div class="item-title">Качество</div>
+                            Наша работа соответсвует Вашим ожиданиям, изложенным в техническом задании.
+                        </div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-lg-1-3">
+                    <div class="about-item middle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ex voluptas sunt aut, odit modi culpa delectus expedita quaerat distinctio non, eum velit, eos vero beatae reiciendis! Molestias, quidem, atque.
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-lg-1-3">
+                    <div class="about-item right">
+                        <div class="item-title">Лояльность</div>
+                        3 месяца обслуживания в подарок! Скидки от партнёров.
+                    </div>
+                </div>
+                <div class="pure-u-1 about-item bottom">
+                    <div class="wrapper">
+                        <div class="text">
+                            <div class="item-title">Знания</div>
+                            Мы знаем как поднять ваш бизнес на новый уровень с помощью web-технологий.
+                        </div>
+                    </div>
+                </div>
