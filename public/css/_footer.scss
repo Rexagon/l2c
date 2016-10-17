@@ -31,3 +31,13 @@
 	color: #515151;
 	background-color: #1b1b1b;
 }
+
+@media (max-width: 62em) {
+	#block-footer , #block-footer-bottom {
+		font-size: 2em;
+	}
+
+	#block-footer .pure-u-1:first-child {
+		margin-bottom: 2em;
+	}
+}

@@ -40,3 +40,13 @@
     -ms-transform-origin: $offset;
     transform-origin: $offset;
 }
+
+.media-br {
+    display: none;
+}
+
+@media (max-width: 62em) {
+    .media-br {
+        display: block;
+    }
+}
