@@ -74,8 +74,7 @@ $primary-blue: #2ebcdd;
     background-size: cover;
 }
 
-
-/* FIRST BLOCK ARROW */
+$arrow-offset: 6vh;
 
 #block-first:before,
 #block-first:after {
@@ -84,7 +83,7 @@ $primary-blue: #2ebcdd;
     width: 6vh;
     height: 5vh;
     background: white;
-    top: 87%;
+    top: 97vh - $arrow-offset;
 }
 
 #block-first:before {
@@ -112,7 +111,7 @@ $primary-blue: #2ebcdd;
     background: white;
     width: calc(50% - 5vh);
     height: 3vh;
-    bottom: 10vh;
+    bottom: $arrow-offset;
 }
 
 #block-first .white-area.left {
@@ -125,7 +124,7 @@ $primary-blue: #2ebcdd;
 
 #block-first .white-area.middle {
     width: 100%;
-    height: 10.1vh;
+    height: $arrow-offset + 0.1vh;
     bottom: 0;
 }
 
