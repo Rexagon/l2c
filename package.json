@@ -4,7 +4,13 @@
   "description": "Web studio landing page",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass assets/css/ -o public/css/",
+    "build-js": "uglifyjs assets/js/index-script.js -o public/js/index-script.js",
+    "build-all": "npm run build-css && npm run build-js",
+
+    "watch-css": "node-sass assets/css/ -o public/css/ --watch",
+    "watch-all": "npm run watch-css",
+
     "start": "node server.js"
   },
   "author": "Ivan Kalinin (ENOJ)",
@@ -13,5 +19,9 @@
     "body-parser": "^1.15.2",
     "ejs": "^2.5.2",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.10.1",
+    "uglify-js": "^2.7.3"
   }
 }

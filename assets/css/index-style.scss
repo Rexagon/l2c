@@ -1,0 +1,369 @@
+/* STUFF */
+
+@import 'base';
+@include font-face("SegoeUIRegular", "../fonts/SegoeUIRegular/SegoeUIRegular");
+@include font-face("SegoeUIRBold", "../fonts/SegoeUIRBold/SegoeUIRBold");
+@include font-face("SegoeUIItalic", "../fonts/SegoeUIItalic/SegoeUIItalic");
+@include font-face("SegoeUILight", "../fonts/SegoeUILight/SegoeUILight");
+@include font-face("SegoeUISemiBold", "../fonts/SegoeUISemiBold/SegoeUISemiBold");
+$primary-blue: #2ebcdd;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SegoeUILight";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
+
+.content {
+    margin: 0 15%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    font-size: 1.75em;
+}
+
+.title span {
+    background: #fff;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.title:before {
+    background: #ddd;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+
+.title:before {
+    left: 0;
+}
+
+@media (max-width: 62em) {
+    .content {
+        margin: 0 2%;
+    }
+    .title {
+        font-size: 3.5em;
+        margin-bottom: 2vh;
+    }
+    .title:before {
+        display:none;
+    }
+}
+
+
+/* MENU */
+
+@import 'menu';
+
+/* FIRST BLOCK */
+
+#block-first {
+    height: 100vh;
+    background: url(/img/main-bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+$arrow-offset: 4vh;
+
+#block-first:before,
+#block-first:after {
+    position: absolute;
+    content: '';
+    width: 6vh;
+    height: 5vh;
+    background: white;
+    top: 97vh - $arrow-offset;
+}
+
+#block-first:before {
+    -webkit-transform: rotate(28deg);
+    -webkit-transform-origin: 0 0;
+    -ms-transform: rotate(28deg);
+    -ms-transform-origin: 0 0;
+    transform: rotate(28deg);
+    transform-origin: 0 0;
+    left: calc(50% - 5vh);
+}
+
+#block-first:after {
+    -webkit-transform: rotate(-28deg);
+    -webkit-transform-origin: 100% 0;
+    -ms-transform: rotate(-28deg);
+    -ms-transform-origin: 100% 0;
+    transform: rotate(-28deg);
+    transform-origin: 100% 0;
+    left: calc(50% - 0.9vh);
+}
+
+#block-first .white-area {
+    position: absolute;
+    background: white;
+    width: calc(50% - 5vh);
+    height: 3vh;
+    bottom: $arrow-offset;
+}
+
+#block-first .white-area.left {
+    left: 0;
+}
+
+#block-first .white-area.right {
+    right: 0;
+}
+
+#block-first .white-area.middle {
+    width: 100%;
+    height: $arrow-offset + 0.1vh;
+    bottom: 0;
+}
+
+#block-second::before {
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 100%;
+    top: 99%;
+    height: 2vh;
+    z-index: -1;
+}
+
+
+/* SECOND BLOCK */
+
+#block-second {
+    background-color: white;
+}
+
+#block-second {
+    .title:before {
+        background: $primary-blue;
+    }
+
+    .circle {
+        position: relative;
+        display: block;
+        margin: 2em;
+        background-color: transparent;
+        color: #222;
+        text-align: center;
+    }
+
+    .circle:after {
+        display: block;
+        padding-bottom: 100%;
+        width: 100%;
+        height: 0;
+        @include border-radius(50%);
+        background-color: #ddd;
+        content: "";
+        -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+        -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+        box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+    }
+
+    .circle-inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle-content {
+        display: table-cell;
+        padding: 1em;
+        vertical-align: middle;
+    }
+
+    .about-item {
+        box-sizing: border-box;
+    }
+
+    .about-item .connection {
+        color: $primary-blue;
+        border: 3px dashed;
+        width: 33vw;
+        display: block;
+    }
+
+    .about-item .connection.right {
+        @include transform-origin(-16.5vw 0);
+        transform: translate(16.5vw) rotate(45deg);
+    }
+
+    .about-item .connection.left {
+        transform: translate(7vw) rotate(-45deg) translate(-32vw)
+    }
+
+    .about-item.middle .circle:after {
+        background-color: $primary-blue;
+    }
+
+    .about-item.middle .circle-content {
+        color: white;
+    }
+
+    .about-item.top,
+    .about-item.bottom {
+        width: 1/3 * 100%;
+    }
+
+    @media (max-width: 80em) {
+        .circle {
+            margin: 0.5em;
+        }
+        .circle-content {
+            font-size: 0.8em;
+        }
+    }
+
+    @media (max-width: 62em) {
+        .about-item.top .circle-inner:after {
+            display: none;
+        }
+        .circle:after {
+            @include border-radius(0);
+        }
+        .circle-content {
+            font-size: 3em;
+        }
+        .about-item.top,
+        .about-item.bottom {
+            width: 100%;
+        }
+        .about-item .connection {
+            display: none;
+        }
+    }
+}
+
+#about-addition {
+    font-size: 1em;
+    color: #3f3f3f;
+
+    span {
+        @include border-radius(3px);
+        padding: 2px 4px;
+        background-color: $primary-blue;
+        color: white;
+        font-family: "SegoeUISemiBold";
+    }
+}
+
+
+/* THIRD BLOCK */
+
+#block-third {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $primary-blue;
+}
+
+#block-third {
+    @import 'monitor';
+
+    .title span {
+        background-color: $primary-blue;
+        color: white;
+    }
+
+    .title:before {
+        background-color: #fff;
+    }
+
+    .development-timeline {
+
+    }
+
+    $circle-diameter: 60px;
+    $circle-space-between: 50px;
+
+    .circle {
+        position: relative;
+        
+        width: $circle-diameter;
+        height: $circle-diameter;
+
+        line-height: $circle-diameter; 
+        text-align: center;
+        font-family: "SegoeUISemiBold";
+        color: white;
+
+        font-size: 1.2em;
+
+        @include border-radius(50%);
+        margin-top: $circle-space-between;
+
+        @include transition(all 0.5s ease-in-out);
+
+        border: 4px solid white;
+        z-index: 2;
+    }
+
+    .circle:not(:hover) .step {
+        display: none;
+    }
+
+    .circle:hover .icon {
+        display: none;
+    }
+
+    .circle:first-child {
+        margin-top: 0;
+    }
+
+    .circle:before {
+        position: absolute;
+        content: '';
+        display: block;
+        
+        width: 0;
+        height: $circle-space-between;
+        
+        left: 50%;
+        top: -$circle-space-between - 4px;
+        
+        margin-left: -1px;
+
+        border: 2px dashed white;
+        z-index: 1;
+    }
+
+    .circle:first-child:before {
+        display: none;
+    }
+}
+
+
+/* FORTH BLOCK */
+
+#block-forth {
+    height: 50vh;
+    background-color: white;
+}
+
+
+/* FOOTER */
+
+@import 'footer';

@@ -162,35 +162,7 @@
         <br class="media-br"> Выводим ваш бизнес на новый уровень. Все права защищены.
     </div>
     <script src="/js/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        if ($(window).width() < 992) {
-            $('#tuckedMenu').hide();
-        }
-
-        $(window).resize(function() {
-            if ($(window).width() < 992) {
-                $('#tuckedMenu').hide();
-            } else {
-                $('#tuckedMenu').show();
-            }
-        });
-
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > $(window).height() * 0.7) {
-                $("#menu").addClass('dark');
-            } else {
-                $("#menu").removeClass('dark');
-            }
-        });
-
-        $('#toggle').click(function() {
-            $('#tuckedMenu').toggle('display');
-            $('#tuckedMenu').toggleClass('menu-tucked');
-            $('#toggle').toggleClass('x');
-        });
-    });
-    </script>
+    <script src="/js/index-script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,28 @@
+
+$(document).ready(function() {
+    if ($(window).width() < 992) {
+        $('#tuckedMenu').hide();
+    }
+
+    $(window).resize(function() {
+        if ($(window).width() < 992) {
+            $('#tuckedMenu').hide();
+        } else {
+            $('#tuckedMenu').show();
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > $(window).height() * 0.7) {
+            $("#menu").addClass('dark');
+        } else {
+            $("#menu").removeClass('dark');
+        }
+    });
+
+    $('#toggle').click(function() {
+        $('#tuckedMenu').toggle('display');
+        $('#tuckedMenu').toggleClass('menu-tucked');
+        $('#toggle').toggleClass('x');
+    });
+});
