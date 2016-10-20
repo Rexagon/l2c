@@ -47,6 +47,7 @@ $screen-height: $screen-width / 1.8;
     left: 50%;
     margin-left: -$screen-height * 0.897;
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 .monitor-content:before {
@@ -160,5 +161,5 @@ $screen-height: $screen-width / 1.8;
     bottom: -10px;
     left: 50%;
     margin-left: -75px;
-    z-index: 999;
+    z-index: 50;
 }

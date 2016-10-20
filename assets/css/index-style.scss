@@ -292,49 +292,9 @@ $arrow-offset: 4vh;
     .title:before {
         background-color: #fff;
     }
-    .development-timeline {}
-    $circle-diameter: 60px;
-    $circle-space-between: 50px;
-    .circle {
-        position: relative;
-        width: $circle-diameter;
-        height: $circle-diameter;
-        line-height: $circle-diameter;
-        text-align: center;
-        font-family: "SegoeUISemiBold";
-        color: white;
-        font-size: 1.2em;
-        @include border-radius(50%);
-        margin-top: $circle-space-between;
-        @include transition(all 0.5s ease-in-out);
-        border: 4px solid white;
-        z-index: 2;
-    }
-    .circle:not(:hover) .step {
-        display: none;
-    }
-    .circle:hover .icon {
-        display: none;
-    }
-    .circle:first-child {
-        margin-top: 0;
-    }
-    .circle:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 0;
-        height: $circle-space-between;
-        left: 50%;
-        top: -$circle-space-between - 4px;
-        margin-left: -1px;
-        border: 2px dashed white;
-        z-index: 1;
-    }
-    .circle:first-child:before {
-        display: none;
-    }
 }
+
+@import 'timeline';
 
 
 /* FORTH BLOCK */
@@ -357,6 +317,13 @@ $arrow-offset: 4vh;
             }
         }
     }
+
+    @media (max-size: 64em) {
+        h3 {
+            font-size: 1em;
+        }
+    }
+
     .price {
         padding: 5px;
         box-sizing: border-box;
@@ -370,18 +337,16 @@ $arrow-offset: 4vh;
         -moz-border-radius-bottomleft: 10px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
-        -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
-        box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
     }
     .project-description {
         box-sizing: border-box;
+        margin-bottom: 2vw;
     }
     .project-description:nth-child(2n+1) {
-        padding-right: 60px;
+        padding-right: 2vw;
     }
     .project-description:nth-child(2n) {
-        padding-left: 60px;
+        padding-left: 2vw;
     }
 }
 
