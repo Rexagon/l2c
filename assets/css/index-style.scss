@@ -2,7 +2,7 @@
 
 @import 'base';
 @include font-face("SegoeUIRegular", "../fonts/SegoeUIRegular/SegoeUIRegular");
-@include font-face("SegoeUIRBold", "../fonts/SegoeUIRBold/SegoeUIRBold");
+@include font-face("SegoeUIBold", "../fonts/SegoeUIBold/SegoeUIBold");
 @include font-face("SegoeUIItalic", "../fonts/SegoeUIItalic/SegoeUIItalic");
 @include font-face("SegoeUILight", "../fonts/SegoeUILight/SegoeUILight");
 @include font-face("SegoeUISemiBold", "../fonts/SegoeUISemiBold/SegoeUISemiBold");
@@ -349,19 +349,33 @@ $arrow-offset: 4vh;
         -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
-
-        .price {
-            position: absolute;
-        }
-
         .text {
             box-sizing: border-box;
-            padding: 10px;
-
+            padding: 10px 15px;
             ul {
                 list-style-position: inside;
             }
         }
+    }
+    .price {
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: $primary-blue;
+        color: white;
+        font-family: "SegoeUIBold";
+        -webkit-border-bottom-right-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-bottomright: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+        -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+        box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+    }
+    .project-description .pure-g {
+        margin-right: 20px;
     }
 }
 

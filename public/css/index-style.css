@@ -57,8 +57,8 @@
   src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?") format("eot"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype"), url('../fonts/SegoeUIRegular/SegoeUIRegular.svg#str-replace("SegoeUIRegular", " ", "_")') format("svg"); }
 
 @font-face {
-  font-family: "SegoeUIRBold";
-  src: url("../fonts/SegoeUIRBold/SegoeUIRBold.eot?") format("eot"), url("../fonts/SegoeUIRBold/SegoeUIRBold.woff") format("woff"), url("../fonts/SegoeUIRBold/SegoeUIRBold.ttf") format("truetype"), url('../fonts/SegoeUIRBold/SegoeUIRBold.svg#str-replace("SegoeUIRBold", " ", "_")') format("svg"); }
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?") format("eot"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype"), url('../fonts/SegoeUIBold/SegoeUIBold.svg#str-replace("SegoeUIBold", " ", "_")') format("svg"); }
 
 @font-face {
   font-family: "SegoeUIItalic";
@@ -642,13 +642,29 @@
     -webkit-box-shadow: 0px 2px 8px 0px #858585;
     -moz-box-shadow: 0px 2px 8px 0px #858585;
     box-shadow: 0px 2px 8px 0px #858585; }
-    #block-forth .price-block .price {
-      position: absolute; }
     #block-forth .price-block .text {
       box-sizing: border-box;
-      padding: 10px; }
+      padding: 10px 15px; }
       #block-forth .price-block .text ul {
         list-style-position: inside; }
+  #block-forth .price {
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #2ebcdd;
+    color: white;
+    font-family: "SegoeUIBold";
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-box-shadow: 0px 2px 8px 0px #858585;
+    -moz-box-shadow: 0px 2px 8px 0px #858585;
+    box-shadow: 0px 2px 8px 0px #858585; }
+  #block-forth .project-description .pure-g {
+    margin-right: 20px; }
 
 /* FOOTER */
 #block-footer {
