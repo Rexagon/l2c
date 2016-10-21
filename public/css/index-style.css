@@ -452,6 +452,10 @@
   border: 20px solid #474e5d;
   border-radius: 10px; }
 
+@media (max-width: 62em) {
+  #block-third .screen {
+    visibility: hidden; } }
+
 #block-third .monitor > div {
   position: absolute; }
 
@@ -594,6 +598,7 @@
   background-color: #fff; }
 
 #development-timeline {
+  visibility: visible;
   position: relative;
   padding: 2em 1em;
   left: -2px; }
@@ -609,6 +614,9 @@
     #development-timeline::before {
       left: 50%;
       margin-left: -2px; } }
+  @media (max-width: 62em) {
+    #development-timeline {
+      padding: 2em -10vw; } }
 
 .timeline-block {
   position: relative;
@@ -721,10 +729,10 @@
     -webkit-box-shadow: 0px 2px 8px 0px #858585;
     -moz-box-shadow: 0px 2px 8px 0px #858585;
     box-shadow: 0px 2px 8px 0px #858585; }
-    #block-forth .price-block .text {
-      font-size: 0.9em;
-      box-sizing: border-box;
-      padding: 10px 15px; }
+  #block-forth .text {
+    font-size: 0.9em;
+    box-sizing: border-box;
+    padding: 10px 15px; }
   #block-forth h3 {
     font-family: "SegoeUIBold";
     padding-bottom: 5px;
@@ -761,11 +769,13 @@
     padding-left: 2vw; }
   #block-forth .pure-u-2-3 {
     font-family: "SegoeUILight"; }
-  @media (max-size: 64em) {
-    #block-forth h3 {
-      font-size: 1em; }
+  @media (max-width: 62em) {
+    #block-forth .text {
+      font-size: 1.7em; }
     #block-forth .project-description {
       margin-bottom: 10px; }
+    #block-forth .price {
+      font-size: 1.7em; }
     #block-forth .project-description:nth-child(2n+1) {
       padding-right: 0px; }
     #block-forth .project-description:nth-child(2n) {

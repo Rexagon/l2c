@@ -12,6 +12,12 @@ $screen-height: $screen-width / 1.8;
     border-radius: 10px;
 }
 
+@media (max-width: 62em) {
+    .screen {
+        visibility: hidden;
+    }
+}
+
 .monitor > div {
     position: absolute;
 }

@@ -16,6 +16,7 @@ $L: 80em;
 }
 
 #development-timeline {
+	visibility: visible;
 	position: relative;
 	padding: 2em 1em;
 	left: -2px;
@@ -36,6 +37,10 @@ $L: 80em;
 			left: 50%;
 			margin-left: -2px;
 		}
+	}
+
+	@media (max-width: 62em) {
+		padding: 2em -10vw;
 	}
 }
 
