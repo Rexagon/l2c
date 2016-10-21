@@ -46,8 +46,11 @@ $screen-height: $screen-width / 1.8;
     height: $screen-height;
     left: 50%;
     margin-left: -$screen-height * 0.897;
-    overflow: hidden;
-    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+.monitor-content::-webkit-scrollbar { 
+    display: none; 
 }
 
 .monitor-content:before {

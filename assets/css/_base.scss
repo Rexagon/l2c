@@ -115,3 +115,11 @@
         display: block;
     }
 }
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
