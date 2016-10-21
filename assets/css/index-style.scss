@@ -325,6 +325,7 @@ $arrow-offset: 4vh;
     }
 
     h3 {
+        font-family: "SegoeUIBold";
         padding-bottom: 5px;
         border-bottom: 1px solid $primary-blue;
     }
@@ -371,7 +372,7 @@ $arrow-offset: 4vh;
     }
 
     .pure-u-2-3 {
-        font-family: "SegoeUIBold";
+        font-family: "SegoeUILight";
     }
         
     @media (max-size: 64em) {

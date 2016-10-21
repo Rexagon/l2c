@@ -726,6 +726,7 @@
       box-sizing: border-box;
       padding: 10px 15px; }
   #block-forth h3 {
+    font-family: "SegoeUIBold";
     padding-bottom: 5px;
     border-bottom: 1px solid #2ebcdd; }
   #block-forth .price {
@@ -759,7 +760,7 @@
   #block-forth .project-description:nth-child(2n) {
     padding-left: 2vw; }
   #block-forth .pure-u-2-3 {
-    font-family: "SegoeUIBold"; }
+    font-family: "SegoeUILight"; }
   @media (max-size: 64em) {
     #block-forth h3 {
       font-size: 1em; }
