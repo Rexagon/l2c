@@ -362,6 +362,17 @@ $arrow-offset: 4vh;
             border-bottom-right-radius: 0;
         }
     }
+
+    .project-description:nth-child(2n+1) {
+        padding-right: 2vw;
+    }
+    .project-description:nth-child(2n) {
+        padding-left: 2vw;
+    }
+
+    .pure-u-2-3 {
+        font-family: "SegoeUIBold";
+    }
         
     @media (max-size: 64em) {
         h3 {
@@ -372,18 +383,12 @@ $arrow-offset: 4vh;
             margin-bottom: 10px;
         }
 
-        
-    }
-
-    .project-description:nth-child(2n+1) {
-        padding-right: 2vw;
-    }
-    .project-description:nth-child(2n) {
-        padding-left: 2vw;
-    }
-
-    .pure-u-2-3 {
-        font-family: "SegoeUILight";
+        .project-description:nth-child(2n+1) {
+            padding-right: 0px;
+        }
+        .project-description:nth-child(2n) {
+            padding-left: 0px;
+        }
     }
 }
 

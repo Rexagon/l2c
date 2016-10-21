@@ -754,17 +754,21 @@
       -webkit-border-bottom-right-radius: 0;
       -moz-border-radius-bottomright: 0;
       border-bottom-right-radius: 0; }
-  @media (max-size: 64em) {
-    #block-forth h3 {
-      font-size: 1em; }
-    #block-forth .project-description {
-      margin-bottom: 10px; } }
   #block-forth .project-description:nth-child(2n+1) {
     padding-right: 2vw; }
   #block-forth .project-description:nth-child(2n) {
     padding-left: 2vw; }
   #block-forth .pure-u-2-3 {
-    font-family: "SegoeUILight"; }
+    font-family: "SegoeUIBold"; }
+  @media (max-size: 64em) {
+    #block-forth h3 {
+      font-size: 1em; }
+    #block-forth .project-description {
+      margin-bottom: 10px; }
+    #block-forth .project-description:nth-child(2n+1) {
+      padding-right: 0px; }
+    #block-forth .project-description:nth-child(2n) {
+      padding-left: 0px; } }
 
 /* FOOTER */
 #block-footer {
