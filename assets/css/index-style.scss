@@ -7,6 +7,7 @@
 @include font-face("SegoeUILight", "../fonts/SegoeUILight/SegoeUILight");
 @include font-face("SegoeUISemiBold", "../fonts/SegoeUISemiBold/SegoeUISemiBold");
 $primary-blue: #2ebcdd;
+$primary-orange: #f5b322;
 * {
     margin: 0;
     padding: 0;
@@ -317,18 +318,15 @@ $arrow-offset: 4vh;
         -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         .text {
+            font-size: 0.9em;
             box-sizing: border-box;
             padding: 10px 15px;
-            ul {
-                list-style-position: inside;
-            }
         }
     }
 
-    @media (max-size: 64em) {
-        h3 {
-            font-size: 1em;
-        }
+    h3 {
+        padding-bottom: 5px;
+        border-bottom: 1px solid $primary-blue;
     }
 
     .price {
@@ -345,15 +343,47 @@ $arrow-offset: 4vh;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
     }
+
+    .price.discount {
+        background-color: $primary-orange;
+        -webkit-border-bottom-left-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        border-bottom-left-radius: 0;
+    }
+    
     .project-description {
         box-sizing: border-box;
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
+
+        .pure-g:last-child .price:not(:last-child) {
+            text-decoration: line-through;
+            -webkit-border-bottom-right-radius: 0;
+            -moz-border-radius-bottomright: 0;
+            border-bottom-right-radius: 0;
+        }
     }
+        
+    @media (max-size: 64em) {
+        h3 {
+            font-size: 1em;
+        }
+
+        .project-description {
+            margin-bottom: 10px;
+        }
+
+        
+    }
+
     .project-description:nth-child(2n+1) {
         padding-right: 2vw;
     }
     .project-description:nth-child(2n) {
         padding-left: 2vw;
+    }
+
+    .pure-u-2-3 {
+        font-family: "SegoeUILight";
     }
 }
 

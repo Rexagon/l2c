@@ -663,7 +663,17 @@
     content: "";
     display: block; }
   .timeline-content h2 {
+    font-family: 'SegoeUIBold';
     color: #303e49; }
+  .timeline-content span {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 2px 4px;
+    background-color: #2ebcdd;
+    color: white;
+    font-family: "SegoeUISemiBold"; }
   .timeline-content p {
     font-size: 13px;
     margin: 1em 0;
@@ -712,13 +722,12 @@
     -moz-box-shadow: 0px 2px 8px 0px #858585;
     box-shadow: 0px 2px 8px 0px #858585; }
     #block-forth .price-block .text {
+      font-size: 0.9em;
       box-sizing: border-box;
       padding: 10px 15px; }
-      #block-forth .price-block .text ul {
-        list-style-position: inside; }
-  @media (max-size: 64em) {
-    #block-forth h3 {
-      font-size: 1em; } }
+  #block-forth h3 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #2ebcdd; }
   #block-forth .price {
     padding: 5px;
     box-sizing: border-box;
@@ -732,13 +741,30 @@
     -moz-border-radius-bottomleft: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px; }
+  #block-forth .price.discount {
+    background-color: #f5b322;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0; }
   #block-forth .project-description {
     box-sizing: border-box;
-    margin-bottom: 2vw; }
+    margin-bottom: 3vw; }
+    #block-forth .project-description .pure-g:last-child .price:not(:last-child) {
+      text-decoration: line-through;
+      -webkit-border-bottom-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+      border-bottom-right-radius: 0; }
+  @media (max-size: 64em) {
+    #block-forth h3 {
+      font-size: 1em; }
+    #block-forth .project-description {
+      margin-bottom: 10px; } }
   #block-forth .project-description:nth-child(2n+1) {
     padding-right: 2vw; }
   #block-forth .project-description:nth-child(2n) {
     padding-left: 2vw; }
+  #block-forth .pure-u-2-3 {
+    font-family: "SegoeUILight"; }
 
 /* FOOTER */
 #block-footer {

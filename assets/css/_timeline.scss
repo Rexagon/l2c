@@ -112,7 +112,16 @@ $color-5: #f0ca45; // yellow
 	@include clearfix;
 
 	h2 {
+		font-family: 'SegoeUIBold';
 		color: $color-1;
+	}
+
+	span {
+		@include border-radius(3px);
+        padding: 2px 4px;
+        background-color: $primary-blue;
+        color: white;
+        font-family: "SegoeUISemiBold";
 	}
 
 	p {
