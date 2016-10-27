@@ -1,20 +1,4 @@
 
-$S: 20em;   
-$M: 48em;     
-$L: 80em;
-
-@mixin MQ($canvas) {
-    @if $canvas == S {
-        @media only screen and (min-width: $S) { @content; } 
-    }
-    @else if $canvas == M {
-        @media only screen and (min-width: $M) { @content; } 
-    }
-    @else if $canvas == L {
-        @media only screen and (min-width: $L) { @content; } 
-    }
-}
-
 #development-timeline {
 	visibility: visible;
 	position: relative;
@@ -32,15 +16,11 @@ $L: 80em;
 		background: darken(white, 5%);
 	}
 
-	@include MQ(L) {
+	@media (min-width: 62em) {
 		&::before {
 			left: 50%;
 			margin-left: -2px;
 		}
-	}
-
-	@media (max-width: 62em) {
-		padding: 2em -10vw;
 	}
 }
 
@@ -57,7 +37,7 @@ $L: 80em;
 		margin-bottom: 0;
 	}
 
-	@include MQ(L) {
+	@media (min-width: 62em) {
 		margin: 4em 0;
 
 		&:first-child {
@@ -83,7 +63,7 @@ $L: 80em;
 	background-color: white;
 	text-align: center;
 
-	@include MQ(L) {
+	@media (min-width: 62em) {
 		width: 60px;
 		height: 60px;
 		left: 50%;
@@ -98,27 +78,17 @@ $L: 80em;
 	}
 }
 
-$main-text: #7f8c97; // main text
-$link: #acb7c0; // anchor tags
-$background: #e9f0f5; // body background color
-
-$color-1: #303e49; // blue dark
-$color-2: #c03b44; // red
-$color-3: #ffffff; // white
-$color-4: #75ce66; // green
-$color-5: #f0ca45; // yellow
-
 .timeline-content {
 	position: relative;
 	margin-left: 60px;
-	background: $color-3;
+	background: white;
 	padding: 1em;
-	box-shadow: 0 3px 0 darken($background, 5%);
+	box-shadow: 0 3px 0 darken(#e9f0f5, 5%);
 	@include clearfix;
 
 	h2 {
 		font-family: 'SegoeUIBold';
-		color: $color-1;
+		color: #303e49;
 	}
 
 	span {
@@ -143,10 +113,10 @@ $color-5: #f0ca45; // yellow
 		height: 0;
 		width: 0;
 		border: 7px solid transparent;
-		border-right: 7px solid $color-3;
+		border-right: 7px solid white;
 	}
 
-	@include MQ(M) {
+	@media (min-width: 48em) {
 		h2 {
 			font-size: 20px;
 		}
@@ -156,7 +126,7 @@ $color-5: #f0ca45; // yellow
 		}
 	}
 
-	@include MQ(L) {
+	@media (min-width: 62em) {
 		margin-left: 0;
 		padding: 1.6em;
 		width: 37%;
@@ -165,7 +135,7 @@ $color-5: #f0ca45; // yellow
 			top: 24px;
 			left: 100%;
 			border-color: transparent;
-			border-left-color: $color-3;
+			border-left-color: white;
 		}
 
 		.timeline-block:nth-child(2n) & {
@@ -176,7 +146,7 @@ $color-5: #f0ca45; // yellow
 				left: auto;
 				right: 100%;
 				border-color: transparent;
-				border-right-color: $color-3;
+				border-right-color: white;
 			}
 		}
 	}

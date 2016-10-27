@@ -1,1 +1,25 @@
-$(document).ready(function(){if($(window).width()<992){$("#tuckedMenu").hide()}$(window).resize(function(){if($(window).width()<992){$("#tuckedMenu").hide()}else{$("#tuckedMenu").show()}});$(window).scroll(function(){if($(document).scrollTop()>$(window).height()*.7){$("#menu").addClass("dark")}else{$("#menu").removeClass("dark")}});$("#toggle").click(function(){$("#tuckedMenu").toggle("display");$("#tuckedMenu").toggleClass("menu-tucked");$("#toggle").toggleClass("x")})});
+
+$(document).ready(function() {
+    $('#menu-toggle').click(function() {
+        var x = document.getElementById("topnav");
+
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    });
+
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});

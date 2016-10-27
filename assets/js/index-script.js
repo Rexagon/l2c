@@ -1,28 +1,25 @@
 
 $(document).ready(function() {
-    if ($(window).width() < 992) {
-        $('#tuckedMenu').hide();
-    }
+    $('#menu-toggle').click(function() {
+        var x = document.getElementById("topnav");
 
-    $(window).resize(function() {
-        if ($(window).width() < 992) {
-            $('#tuckedMenu').hide();
+        if (x.className === "topnav") {
+            x.className += " responsive";
         } else {
-            $('#tuckedMenu').show();
+            x.className = "topnav";
         }
     });
 
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > $(window).height() * 0.7) {
-            $("#menu").addClass('dark');
-        } else {
-            $("#menu").removeClass('dark');
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
         }
-    });
-
-    $('#toggle').click(function() {
-        $('#tuckedMenu').toggle('display');
-        $('#tuckedMenu').toggleClass('menu-tucked');
-        $('#toggle').toggleClass('x');
     });
 });
