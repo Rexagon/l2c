@@ -81,8 +81,7 @@
   font-family: "SegoeUILight";
   font-style: normal;
   font-variant: normal;
-  font-weight: 100;
-  box-sizing: border-box; }
+  font-weight: 100; }
 
 .content {
   margin: 0 15%; }
@@ -163,8 +162,8 @@
       #menu ul.topnav li:not(.logo) {
         border-bottom: none; }
       #menu ul.topnav li a {
-        font-size: 60px;
-        line-height: 60px; }
+        font-size: 80px;
+        line-height: 80px; }
       #menu ul.topnav li.logo {
         float: none;
         display: inline; }
