@@ -723,7 +723,9 @@
     #block-portfolio .front,
     #block-portfolio .back {
       height: 33.3vw;
-      font-size: 1.2em; } }
+      font-size: 1.2em; }
+    #block-portfolio .back {
+      padding-top: 10px; } }
 
 /* BLOCK SIX */
 #block-motivation {
