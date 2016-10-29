@@ -15,6 +15,7 @@ $primary-orange: #f5b322;
     font-style: normal;
     font-variant: normal;
     font-weight: 100;
+    box-sizing: border-box;
 }
 
 .content {
@@ -435,7 +436,7 @@ $primary-orange: #f5b322;
     .flip-container,
     .front,
     .back {
-        width: 16.5vw;
+        //width: 16.5vw;
         height: 16.49vw;
     }
     .flipper {
@@ -472,7 +473,7 @@ $primary-orange: #f5b322;
         .flip-container,
         .front,
         .back {
-            width: 33.3vw;
+            //width: 33.3vw;
             height: 33.3vw;
             font-size: 1.2em;
         }
