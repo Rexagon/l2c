@@ -358,6 +358,7 @@ $primary-orange: #f5b322;
             -webkit-border-bottom-right-radius: 0;
             -moz-border-radius-bottomright: 0;
             border-bottom-right-radius: 0;
+            font-family: "SegoeUIRegular";
         }
     }
 
@@ -374,7 +375,7 @@ $primary-orange: #f5b322;
         
     @media (max-width: 62em) {
         .text {
-            font-size: 1.6em;
+            font-size: 1.7em;
         }
 
         .project-description {

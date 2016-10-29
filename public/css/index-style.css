@@ -643,7 +643,8 @@
       text-decoration: line-through;
       -webkit-border-bottom-right-radius: 0;
       -moz-border-radius-bottomright: 0;
-      border-bottom-right-radius: 0; }
+      border-bottom-right-radius: 0;
+      font-family: "SegoeUIRegular"; }
   #block-services .project-description:nth-child(2n+1) {
     padding-right: 2vw; }
   #block-services .project-description:nth-child(2n) {
@@ -652,7 +653,7 @@
     font-family: "SegoeUILight"; }
   @media (max-width: 62em) {
     #block-services .text {
-      font-size: 1.6em; }
+      font-size: 1.7em; }
     #block-services .project-description {
       margin-bottom: 120px; }
     #block-services .price {
