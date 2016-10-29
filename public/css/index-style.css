@@ -106,7 +106,7 @@
   z-index: 1; }
 
 .title:before {
-  background: #ddd;
+  background: #2ebcdd;
   content: "";
   display: block;
   height: 1px;
@@ -159,8 +159,8 @@
     #menu ul.topnav a.order {
       color: #2ebcdd; }
     @media (max-width: 62em) {
-      #menu ul.topnav li:not(.logo) {
-        border-bottom: none; }
+      #menu ul.topnav li:not(.logo) a:hover {
+        border-bottom: 0; }
       #menu ul.topnav li a {
         font-size: 80px;
         line-height: 80px; }

@@ -46,7 +46,7 @@ $primary-orange: #f5b322;
 }
 
 .title:before {
-    background: #ddd;
+    background: $primary-blue;
     content: "";
     display: block;
     height: 1px;

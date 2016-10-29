@@ -46,8 +46,8 @@ $menu-mobile-font: 80px;
         }
 
         @media (max-width: 62em) {
-            li:not(.logo) {
-                border-bottom: none;
+            li:not(.logo) a:hover {
+                border-bottom: 0;
             }
 
             li a {
