@@ -45,7 +45,7 @@ $screen-height: $screen-width / 1.8;
     width: $screen-width;
     height: $screen-height;
     left: 50%;
-    margin-left: -$screen-height * 0.897;
+    margin-left: -30vw;
     overflow-x:hidden;
 }
 
@@ -187,5 +187,20 @@ $screen-height: $screen-width / 1.8;
 
     .monitor > div{
         position: relative;
+    }
+}
+
+#monitor-disabled {
+    width: $screen-width;
+    height: $screen-height;
+    left: 50%;
+    margin-left: -30vw;
+    overflow-x:hidden;
+    background-color: black;
+}
+
+.screen.disabled {
+    &:after {
+        background-color: #45f442;
     }
 }

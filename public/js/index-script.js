@@ -24,6 +24,13 @@ $(document).ready(function() {
                 scrollTop: aboutOffsetTarget + aboutOffset
             }, 600, function() {
                 scrolled = true;
+
+                $('#monitor').removeClass('disabled');
+                $('#monitor-disabled').animate({
+                    opacity: 0
+                }, 300, function() {
+                    $(this).remove();
+                });
             });
         } else {
 

@@ -421,7 +421,7 @@
     width: 60vw;
     height: 33.33333vw;
     left: 50%;
-    margin-left: -29.9vw;
+    margin-left: -30vw;
     overflow-x: hidden; }
   #block-timeline .monitor-content::-webkit-scrollbar {
     display: none; }
@@ -525,12 +525,20 @@
       width: auto; }
     #block-timeline .monitor > div {
       position: relative; } }
+  #block-timeline #monitor-disabled {
+    width: 60vw;
+    height: 33.33333vw;
+    left: 50%;
+    margin-left: -30vw;
+    overflow-x: hidden;
+    background-color: black; }
+  #block-timeline .screen.disabled:after {
+    background-color: #45f442; }
 
 #development-timeline {
   visibility: visible;
   position: relative;
-  padding: 2em 1em;
-  left: -2px; }
+  padding: 2em 1em; }
   #development-timeline::before {
     content: '';
     position: absolute;
