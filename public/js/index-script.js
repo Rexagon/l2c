@@ -1,5 +1,15 @@
 
 $(document).ready(function() {
+    var targetOffset = $("#block-about").offset().top - 100;
+
+    var w = $(window).scroll(function(){
+        if (w.scrollTop() > targetOffset) {
+            $('#menu').attr('class', '');
+        } else {
+            $('#menu').attr('class', 'light');
+        }
+    });
+
     $('#menu-toggle').click(function() {
         var x = document.getElementById("topnav");
 
