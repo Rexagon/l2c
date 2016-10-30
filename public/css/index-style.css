@@ -276,9 +276,9 @@
     box-shadow: 0px 4px 16px 0px #858585;
     transition: 0.3s all; }
   #block-about .circle:hover:after {
-    -webkit-box-shadow: 0px 0px 0px 3px #2ebcdd;
-    -moz-box-shadow: 0px 0px 0px 3px #2ebcdd;
-    box-shadow: 0px 0px 0px 3px #2ebcdd; }
+    -webkit-box-shadow: 0px 0px 0px 4px #2ebcdd;
+    -moz-box-shadow: 0px 0px 0px 4px #2ebcdd;
+    box-shadow: 0px 0px 0px 4px #2ebcdd; }
   #block-about .circle-inner {
     position: absolute;
     top: 0;
