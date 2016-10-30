@@ -8,14 +8,15 @@ $menu-mobile-font: 80px;
     width: 100%;
     height: $menu-normal-height;
     background-color: #333;
+    text-align: center;
 
     ul.topnav {
-        list-style-type: none;
+        list-style: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
         background-color: #333;
-        text-align: center;
+        right: 0;
         
         li {
             float: left;
@@ -40,6 +41,14 @@ $menu-mobile-font: 80px;
         li.icon {
             display: none;
         }
+
+        /* li.logo a {
+            padding: 0;
+        }
+
+        li.logo a img {
+            height: $menu-normal-height - 1px;
+        }*/
 
         a.order {
             color: $primary-blue;

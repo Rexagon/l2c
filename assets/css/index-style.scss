@@ -261,6 +261,8 @@ $primary-orange: #f5b322;
     @media (max-width: 62em) {
         #about-addition {
             font-size: 2em;
+            padding: 0 5%;
+            text-align: center;
         }
     }
 }
@@ -308,10 +310,17 @@ $primary-orange: #f5b322;
     background-color: white;
 
     .price-block {
-        min-height: 6em;
+        min-height: 177px;
         -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+        
+        svg {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            fill: $primary-blue;
+        }
     }
 
     .text {
