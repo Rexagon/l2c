@@ -22,4 +22,11 @@ $(document).ready(function() {
             }
         }
     });
+
+    var phraseBlock = $('#greeting-text');
+    var phrases = ['мотивируящая фраза 1', 'ещё одна фраза', 'что-то там про чего-то', 'вы лучшие. отвечаю'];
+    var i = 1;
+    setInterval(function(){
+        phraseBlock.text(phrases[i++ % phrases.length]);
+    }, 5000);
 });

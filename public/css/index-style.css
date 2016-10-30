@@ -237,6 +237,16 @@
     width: 100%;
     height: 4.1vh;
     bottom: 0; }
+  #block-first #greeting-text {
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "SegoeUIBold";
+    font-size: 6vh;
+    text-shadow: 0.2vh 0.2vh 0px rgba(150, 150, 150, 0.5); }
 
 /* SECOND BLOCK */
 #block-about {
