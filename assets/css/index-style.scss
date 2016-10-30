@@ -247,6 +247,9 @@ $primary-orange: #f5b322;
         }
         .circle:after {
             @include border-radius(0);
+            -webkit-box-shadow: 0px 0px 0px 4px rgba(46,188,221,1);
+            -moz-box-shadow: 0px 0px 0px 4px rgba(46,188,221,1);
+            box-shadow: 0px 0px 0px 4px rgba(46,188,221,1);
         }
         .circle-content {
             font-size: 3em;

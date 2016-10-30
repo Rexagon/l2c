@@ -340,7 +340,10 @@
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       -ms-border-radius: 0;
-      border-radius: 0; }
+      border-radius: 0;
+      -webkit-box-shadow: 0px 0px 0px 4px #2ebcdd;
+      -moz-box-shadow: 0px 0px 0px 4px #2ebcdd;
+      box-shadow: 0px 0px 0px 4px #2ebcdd; }
     #block-about .circle-content {
       font-size: 3em; }
     #block-about .about-item.top,
