@@ -416,7 +416,7 @@
     border-radius: 8px;
     bottom: -10px;
     margin: 0 0 -4px -4px;
-    background: #e8ebf0; }
+    background-color: #45f442; }
   #block-timeline .monitor-content {
     width: 60vw;
     height: 33.33333vw;
@@ -533,7 +533,7 @@
     overflow-x: hidden;
     background-color: black; }
   #block-timeline .screen.disabled:after {
-    background-color: #45f442; }
+    background-color: #e8ebf0; }
 
 #development-timeline {
   visibility: visible;
