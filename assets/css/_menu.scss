@@ -6,7 +6,7 @@ $menu-mobile-font: 80px;
     position: fixed;
     z-index: 100;
     width: 100%;
-    height: $menu-normal-height;
+    height: $menu-normal-height + 1px;
     background-color: #333;
     text-align: center;
 
@@ -28,14 +28,13 @@ $menu-mobile-font: 80px;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            transition: 0.3s;
             font-size: $menu-normal-font;
             line-height: $menu-normal-font;
         }
 
         li:not(.logo) a:hover {
             background-color: #555;
-            border-bottom: 1px solid $primary-blue;
+            border-bottom: 2px solid $primary-blue;
         }
     
         li.icon {
