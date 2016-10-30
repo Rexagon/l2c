@@ -6,7 +6,7 @@
   "scripts": {
     "build-css": "node-sass assets/css/ -o public/css/",
     "build-js": "uglifyjs assets/js/index-script.js -o public/js/index-script.js",
-    "build-all": "npm run build-css && npm run build-js",
+    "build-all": "npm run build-css",
 
     "watch-css": "node-sass assets/css/ -o public/css/ --watch",
     "watch-all": "npm run watch-css",
