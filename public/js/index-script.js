@@ -40,13 +40,7 @@ $(document).ready(function() {
     });
 
     $('#menu-toggle').click(function() {
-        var x = document.getElementById("topnav");
-
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
+        $('#topnav').toggleClass('responsive');
     });
 
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -55,6 +49,7 @@ $(document).ready(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 scrolled = true;
+                $('#topnav').removeClass('responsive');
                 $('html, body').stop().animate({
                     scrollTop: target.offset().top
                 }, 1000);
