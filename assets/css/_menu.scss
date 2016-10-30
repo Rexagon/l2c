@@ -42,11 +42,11 @@ $menu-mobile-font: 80px;
             display: none;
         }
 
-        /* li.logo a {
-            padding: 0;
+        li.logo {
+            margin-left: 30%;
         }
 
-        li.logo a img {
+        /*li.logo a img {
             height: $menu-normal-height - 1px;
         }*/
 
@@ -63,6 +63,11 @@ $menu-mobile-font: 80px;
                 font-size: $menu-mobile-font;
                 line-height: $menu-mobile-font;
             }
+
+            li.logo {
+                margin-left: 0;
+            }
+
 
             li.logo {
                 float: none;
