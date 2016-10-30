@@ -180,12 +180,13 @@ $primary-orange: #f5b322;
         -webkit-box-shadow: 0px 4px 16px 0px rgba(133, 133, 133, 1);
         -moz-box-shadow: 0px 4px 16px 0px rgba(133, 133, 133, 1);
         box-shadow: 0px 4px 16px 0px rgba(133, 133, 133, 1);
+        transition: 0.3s all;
     }
 
     .circle:hover:after {
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
+        -webkit-box-shadow: 0px 0px 0px 3px rgba(46,188,221,1);
+        -moz-box-shadow: 0px 0px 0px 3px rgba(46,188,221,1);
+        box-shadow: 0px 0px 0px 3px rgba(46,188,221,1);
     }
 
     .circle-inner {
