@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     var scrolled = true;
 
-    var aboutOffset = $(window).width() / 3;
+    var aboutOffset = $(window).width() / 4;
     var aboutOffsetTarget = $("#block-timeline").offset().top - aboutOffset;
 
     var menuOffsetTarget = $("#block-about").offset().top - 100;
@@ -22,7 +22,7 @@ $(document).ready(function() {
             scrolled = false;
             $('html, body').animate({
                 scrollTop: aboutOffsetTarget + aboutOffset
-            }, 500, function() {
+            }, 600, function() {
                 scrolled = true;
             });
         } else {
