@@ -48,11 +48,13 @@ $(document).ready(function() {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-                scrolled = true;
+                scrolled = false;
                 $('#topnav').removeClass('responsive');
                 $('html, body').stop().animate({
                     scrollTop: target.offset().top
-                }, 1000);
+                }, 1000, function() {
+                    scrolled = true;
+                });
                 return false;
             }
         }
