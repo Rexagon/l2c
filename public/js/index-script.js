@@ -59,7 +59,7 @@ $(document).ready(function() {
     });
 
     var phraseBlock = $('#greeting-text');
-    var phrases = ['мотивируящая фраза 1', 'ещё одна фраза', 'что-то там про чего-то', 'вы лучшие. отвечаю'];
+    var phrases = ['L2C - выводим Ваш бизнес в онлайн', 'Web и mobile технологии работают на вас', 'Поднимаем продажи и сокращаем расходы', 'Мы зарабатываем, когда вы довольны результатом!'];
     var i = 1;
     setInterval(function(){
         phraseBlock.text(phrases[i++ % phrases.length]);
