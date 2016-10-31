@@ -331,12 +331,32 @@ $primary-orange: #f5b322;
         -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
         box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
+        cursor: pointer;
         
         svg {
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
             fill: $primary-blue;
+        }
+    }
+
+    .price-block:hover {
+        background-color: $primary-blue;
+        color: white;
+        transition: 0.3s all;
+
+        svg {
+            fill: white;
+            transition: 0.3s all;
+        }
+
+        h3 {
+            border-bottom: 1px solid white;
+        }
+
+        .text {
+            content: 'ПОДРОБНЕЕ';
         }
     }
 
@@ -366,13 +386,6 @@ $primary-orange: #f5b322;
         -moz-border-radius-bottomleft: 10px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        cursor: pointer;
-    }
-
-    .price:hover {
-        -webkit-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
-        -moz-box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
-        box-shadow: 0px 2px 8px 0px rgba(133, 133, 133, 1);
     }
 
     .price.discount {
@@ -544,3 +557,158 @@ $primary-orange: #f5b322;
 /* FOOTER */
 
 @import 'footer';
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@media (max-width: 62em) {
+    .modal {
+        padding-top: 20%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes animatetop {
+    0% {
+        top: -300px;
+        opacity: 0
+    }
+    100% {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    0% {
+        top: -300px;
+        opacity: 0
+    }
+    100% {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    color: white;
+    float: right;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: $primary-orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 16px 16px;
+    background-color: $primary-blue;
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+
+    #modal-title {
+        font-family: "SegoeUIBold" !important;
+    }
+}
+
+.modal-body {
+    margin-top: -10px;
+    padding: 16px 20px;
+    background-color: white;
+    font-size: 15px;
+    line-height: 1.4;
+
+    .modal-description {
+        margin-top: 10px;
+        overflow: hidden;
+
+        #modal-image {
+            width: 10vw;
+            height: 10vw;
+            display: inline-block;
+            float: left;
+            margin: 10px;
+            margin-right: 20px;
+            clear:both;
+
+            svg {
+                fill: $primary-blue;
+            }
+        }
+    }
+
+    #modal-list-title {
+        font-family: "SegoeUIBold";
+    }
+
+    #modal-list {
+        margin-left: 30px;
+
+        li {
+            font-family: "SegoeUISemiBold";
+            margin: 5px 0;
+        }
+    }
+}
+
+.modal-footer {
+    padding: 16px 16px;
+    background-color: $primary-orange;
+    color: white;
+    
+    #modal-question {
+        font-size: 1.2em;
+        font-family: "SegoeUIBold";
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 62em) {
+    .modal-header {
+        font-size: 2em;
+    }
+
+    .modal-body {
+        font-size: 2em;
+    }
+
+    .modal-footer {
+        font-size: 1.7em;
+    }
+}

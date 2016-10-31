@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* STUFF */
 @font-face {
   font-family: 'icomoon';
@@ -47,6 +48,9 @@
 
 .icon-embed2:before {
   content: "\ea80"; }
+
+.icon-cross:before {
+  content: "\ea0f"; }
 
 .media-br {
   display: none; }
@@ -512,7 +516,18 @@
     left: 50%;
     margin-left: -75px;
     z-index: 50; }
+  #block-timeline #monitor-disabled {
+    width: 60vw;
+    height: 33.33333vw;
+    left: 50%;
+    margin-left: -30vw;
+    overflow-x: hidden;
+    background-color: black; }
+  #block-timeline .screen.disabled:after {
+    background-color: #e8ebf0; }
   @media (max-width: 62em) {
+    #block-timeline #monitor-disabled {
+      display: none; }
     #block-timeline .screen {
       visibility: hidden;
       height: auto;
@@ -528,15 +543,6 @@
       width: auto; }
     #block-timeline .monitor > div {
       position: relative; } }
-  #block-timeline #monitor-disabled {
-    width: 60vw;
-    height: 33.33333vw;
-    left: 50%;
-    margin-left: -30vw;
-    overflow-x: hidden;
-    background-color: black; }
-  #block-timeline .screen.disabled:after {
-    background-color: #e8ebf0; }
 
 #development-timeline {
   visibility: visible;
@@ -668,12 +674,24 @@
     min-height: 177px;
     -webkit-box-shadow: 0px 2px 8px 0px #858585;
     -moz-box-shadow: 0px 2px 8px 0px #858585;
-    box-shadow: 0px 2px 8px 0px #858585; }
+    box-shadow: 0px 2px 8px 0px #858585;
+    cursor: pointer; }
     #block-services .price-block svg {
       width: 100%;
       padding: 20px;
       box-sizing: border-box;
       fill: #2ebcdd; }
+  #block-services .price-block:hover {
+    background-color: #2ebcdd;
+    color: white;
+    transition: 0.3s all; }
+    #block-services .price-block:hover svg {
+      fill: white;
+      transition: 0.3s all; }
+    #block-services .price-block:hover h3 {
+      border-bottom: 1px solid white; }
+    #block-services .price-block:hover .text {
+      content: 'ПОДРОБНЕЕ'; }
   #block-services .text {
     font-size: 0.9em;
     box-sizing: border-box;
@@ -694,12 +712,7 @@
     -moz-border-radius-bottomright: 10px;
     -moz-border-radius-bottomleft: 10px;
     border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    cursor: pointer; }
-  #block-services .price:hover {
-    -webkit-box-shadow: 0px 2px 8px 0px #858585;
-    -moz-box-shadow: 0px 2px 8px 0px #858585;
-    box-shadow: 0px 2px 8px 0px #858585; }
+    border-bottom-left-radius: 10px; }
   #block-services .price.discount {
     background-color: #f5b322;
     -webkit-border-bottom-left-radius: 0;
@@ -883,3 +896,117 @@
   @media (max-width: 62em) {
     #application input, #application textarea {
       width: 80%; } }
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  padding-top: 10%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s; }
+
+@media (max-width: 62em) {
+  .modal {
+    padding-top: 20%; }
+  .modal-content {
+    width: 90%; } }
+
+@-webkit-keyframes animatetop {
+  0% {
+    top: -300px;
+    opacity: 0; }
+  100% {
+    top: 0;
+    opacity: 1; } }
+
+@keyframes animatetop {
+  0% {
+    top: -300px;
+    opacity: 0; }
+  100% {
+    top: 0;
+    opacity: 1; } }
+
+.close {
+  color: white;
+  float: right;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #f5b322;
+  text-decoration: none;
+  cursor: pointer; }
+
+.modal-header {
+  padding: 16px 16px;
+  background-color: #2ebcdd;
+  color: white;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+  position: relative; }
+  .modal-header #modal-title {
+    font-family: "SegoeUIBold" !important; }
+
+.modal-body {
+  margin-top: -10px;
+  padding: 16px 20px;
+  background-color: white;
+  font-size: 15px;
+  line-height: 1.4; }
+  .modal-body .modal-description {
+    margin-top: 10px;
+    overflow: hidden; }
+    .modal-body .modal-description #modal-image {
+      width: 10vw;
+      height: 10vw;
+      display: inline-block;
+      float: left;
+      margin: 10px;
+      margin-right: 20px;
+      clear: both; }
+      .modal-body .modal-description #modal-image svg {
+        fill: #2ebcdd; }
+  .modal-body #modal-list-title {
+    font-family: "SegoeUIBold"; }
+  .modal-body #modal-list {
+    margin-left: 30px; }
+    .modal-body #modal-list li {
+      font-family: "SegoeUISemiBold";
+      margin: 5px 0; }
+
+.modal-footer {
+  padding: 16px 16px;
+  background-color: #f5b322;
+  color: white; }
+  .modal-footer #modal-question {
+    font-size: 1.2em;
+    font-family: "SegoeUIBold";
+    text-align: center; }
+
+@media (max-width: 62em) {
+  .modal-header {
+    font-size: 2em; }
+  .modal-body {
+    font-size: 2em; }
+  .modal-footer {
+    font-size: 1.7em; } }
