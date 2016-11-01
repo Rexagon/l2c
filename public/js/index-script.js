@@ -146,15 +146,19 @@ $(document).ready(function() {
         $('#modal-list').html(list);
         $('#modal-addition').html(dialog.addition);
         $('#modal-question').html('<b>' + dialog.question + '</b><br><small>Наши специалисты подготовят для Вашей сферы бизнеса персональное предложение, которое заинтересует именно ваших клиентов.</small>');
+
+        $("body").addClass("modal-open");
         modal.show();
     });
 
     $('#modal-close').click(function() {
+        $("body").removeClass("modal-open")
         modal.hide();
     });
 
     $(window).click(function(event) {
         if (event.target.id == "modal") {
+            $("body").removeClass("modal-open")
             modal.hide();
         }
     });
