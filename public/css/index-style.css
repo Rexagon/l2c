@@ -998,12 +998,24 @@
 
 .modal-footer {
   padding: 16px 16px;
-  background-color: #f5b322;
+  background-color: #222;
   color: white; }
   .modal-footer #modal-question {
     font-size: 1.2em;
     font-family: "SegoeUIBold";
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 15px; }
+
+#modal-email {
+  border-radius: 2px 0px 0px 2px;
+  -moz-border-radius: 2px 0px 0px 2px;
+  -webkit-border-radius: 2px 0px 0px 2px;
+  color: #111; }
+
+#modal-send {
+  border-radius: 0px 2px 2px 0px;
+  -moz-border-radius: 0px 2px 2px 0px;
+  -webkit-border-radius: 0px 2px 2px 0px; }
 
 @media (max-width: 62em) {
   .modal-header {
