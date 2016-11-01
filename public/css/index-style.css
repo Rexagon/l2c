@@ -151,6 +151,8 @@
     padding: 0;
     overflow: hidden;
     right: 0;
+    float: right;
+    margin-right: 15%;
     /*li.logo a img {
             height: $menu-normal-height - 1px;
         }*/ }
@@ -169,37 +171,37 @@
       border-bottom: 2px solid #2ebcdd; }
     #menu ul.topnav li.icon {
       display: none; }
-    #menu ul.topnav li.logo {
-      margin-left: 30%; }
-    #menu ul.topnav a.order {
+    #menu ul.topnav li.order a {
       color: #2ebcdd; }
     @media (max-width: 62em) {
-      #menu ul.topnav li:not(.logo) a:hover {
-        border-bottom: 0; }
-      #menu ul.topnav li a {
-        font-size: 80px;
-        line-height: 80px; }
-      #menu ul.topnav li.logo {
-        margin-left: 0; }
-      #menu ul.topnav li.logo {
-        float: none;
-        display: inline; }
-      #menu ul.topnav li:not(:first-child) {
-        display: none; }
-      #menu ul.topnav li.icon {
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        top: 0; }
-      #menu ul.topnav.responsive {
-        position: relative; }
-      #menu ul.topnav.responsive li {
-        float: none;
-        display: inline; }
-      #menu ul.topnav.responsive li a {
-        display: block; }
-      #menu ul.topnav.responsive li:not(:first-child) a {
-        background-color: #222; } }
+      #menu ul.topnav {
+        float: none; }
+        #menu ul.topnav li:not(.logo) a:hover {
+          border-bottom: 0; }
+        #menu ul.topnav li a {
+          font-size: 80px;
+          line-height: 80px; }
+        #menu ul.topnav li.logo {
+          margin-left: 0; }
+        #menu ul.topnav li.logo {
+          float: none;
+          display: inline; }
+        #menu ul.topnav li:not(:first-child) {
+          display: none; }
+        #menu ul.topnav li.icon {
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 0; }
+        #menu ul.topnav.responsive {
+          position: relative; }
+        #menu ul.topnav.responsive li {
+          float: none;
+          display: inline; }
+        #menu ul.topnav.responsive li a {
+          display: block; }
+        #menu ul.topnav.responsive li:not(:first-child) a {
+          background-color: #222; } }
 
 @media (max-width: 62em) {
   #menu {
@@ -1026,4 +1028,6 @@
     font-size: 1.7em; } }
 
 body.modal-open {
+  margin: 0;
+  padding: 0;
   overflow: hidden; }

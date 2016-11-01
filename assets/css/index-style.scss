@@ -729,5 +729,7 @@ $primary-orange: #f5b322;
 }
 
 body.modal-open {
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }

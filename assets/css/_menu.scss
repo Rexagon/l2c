@@ -27,6 +27,8 @@ $menu-mobile-font: 80px;
         padding: 0;
         overflow: hidden;
         right: 0;
+        float: right;
+        margin-right: 15%;
         
         li {
             float: left;
@@ -51,19 +53,17 @@ $menu-mobile-font: 80px;
             display: none;
         }
 
-        li.logo {
-            margin-left: 30%;
-        }
-
         /*li.logo a img {
             height: $menu-normal-height - 1px;
         }*/
 
-        a.order {
+        li.order a {
             color: $primary-blue;
         }
 
         @media (max-width: 62em) {
+            float: none;
+
             li:not(.logo) a:hover {
                 border-bottom: 0;
             }
