@@ -98,6 +98,21 @@
         text-shadow: none;
     }
 
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+        color: #555;
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder {
+       color: #555;
+       opacity:  1;
+    }
+    input::-moz-placeholder, textarea::-moz-placeholder {
+       color: #555;
+       opacity: 1;
+    }
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+       color: #555;
+    }
+
     .pure-control-group:first-child:before {
         content: "*";
         position: relative;
@@ -121,6 +136,22 @@
     .addition-title {
         font-size: 1.3em;
         color: $primary-orange;
+        font-family: "SegoeUISemiBold";
+    }
+
+    input::-webkit-input-placeholder {
+        color: #555;
+    }
+    input:-moz-placeholder {
+       color: #555;
+       opacity:  1;
+    }
+    input::-moz-placeholder {
+       color: #555;
+       opacity: 1;
+    }
+    input:-ms-input-placeholder {
+       color: #555;
     }
 
     button {
