@@ -1,13 +1,7 @@
 /* STUFF */
 
 @import 'base';
-@include font-face("SegoeUIRegular", "../fonts/SegoeUIRegular/SegoeUIRegular");
-@include font-face("SegoeUIBold", "../fonts/SegoeUIBold/SegoeUIBold");
-@include font-face("SegoeUIItalic", "../fonts/SegoeUIItalic/SegoeUIItalic");
-@include font-face("SegoeUILight", "../fonts/SegoeUILight/SegoeUILight");
-@include font-face("SegoeUISemiBold", "../fonts/SegoeUISemiBold/SegoeUISemiBold");
-$primary-blue: #2ebcdd;
-$primary-orange: #f5b322;
+
 * {
     margin: 0;
     padding: 0;
@@ -508,7 +502,7 @@ $primary-orange: #f5b322;
 
         box-sizing: border-box;
 
-        padding-top: 20%;
+        padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
         text-align: center;
@@ -519,13 +513,8 @@ $primary-orange: #f5b322;
         .flip-container,
         .front,
         .back {
-            //width: 33.3vw;
             height: 33.3vw;
             font-size: 1.2em;
-        }
-
-        .back {
-            padding-top: 10px;
         }
     }
 }
@@ -549,8 +538,22 @@ $primary-orange: #f5b322;
         margin-left: -5.29vh;
     }
 
-    .motivation {
+    #motivation {
         font-size: 1.3em;
+
+        ul {
+            padding: 10px 25px;
+            list-style-position: inside;
+            border-radius: 0px 0px 0px 0px;
+            -moz-border-radius: 0px 0px 0px 0px;
+            -webkit-border-radius: 0px 0px 0px 0px;
+            border: 2px solid #2ebcdd;
+
+            li {
+                margin: 0.7em 0;
+                font-family: "SegoeUISemiBold";
+            }
+        }
     }
 }
 
@@ -570,7 +573,6 @@ $primary-orange: #f5b322;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 

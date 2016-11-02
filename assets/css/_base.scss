@@ -121,3 +121,12 @@
         display: block;
     }
 }
+
+@include font-face("SegoeUIRegular", "../fonts/SegoeUIRegular/SegoeUIRegular");
+@include font-face("SegoeUIBold", "../fonts/SegoeUIBold/SegoeUIBold");
+@include font-face("SegoeUIItalic", "../fonts/SegoeUIItalic/SegoeUIItalic");
+@include font-face("SegoeUILight", "../fonts/SegoeUILight/SegoeUILight");
+@include font-face("SegoeUISemiBold", "../fonts/SegoeUISemiBold/SegoeUISemiBold");
+
+$primary-blue: #2ebcdd;
+$primary-orange: #f5b322;
