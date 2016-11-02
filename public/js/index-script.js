@@ -125,9 +125,10 @@ $(document).ready(function() {
         question: ''
     }];
 
+    var id = -1;
     var modal = $('#modal');
     $('.price-block').click(function() {
-        var id = $('.price-block').index($(this));
+        id = $('.price-block').index($(this));
         var dialog =  dialogs[id];
         $('#modal-title').text($(this).find('h3')[0].innerHTML);
 
@@ -151,15 +152,38 @@ $(document).ready(function() {
         modal.show();
     });
 
-    $('#modal-close').click(function() {
+    $('#modal-send').click(function() {
+        this.disabled = true;
+        $.post('/service', {id: id, email: $('#modal-email').val()}, function(res) {
+            if (res.err) {
+                if (res.err == 'sender') {
+                    alert('Извините, произошла ошибка. Попробуйте ещё раз.')
+                } else {
+                    alert('Укажите правильную почту.');
+                }
+            }
+
+            this.removeAttribute("disabled");
+        });
+    });
+
+    function closeModal() {
         $("body").removeClass("modal-open")
         modal.hide();
+    }
+
+    $('#modal-close').click(function() {
+        closeModal();
     });
 
     $(window).click(function(event) {
         if (event.target.id == "modal") {
-            $("body").removeClass("modal-open")
-            modal.hide();
+            closeModal();
+        }
+    });
+    $('.modal-content').click(function() {
+        if (event.target == this) {
+            closeModal();
         }
     });
 });
