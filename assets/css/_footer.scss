@@ -55,7 +55,7 @@
 #application {
     text-align: center;
     color: white;
-    padding: 60px;
+    padding: 40px 60px 60px 60px;
     
     textarea {
         resize: none;
@@ -98,10 +98,37 @@
         text-shadow: none;
     }
 
+    .pure-control-group:first-child:before {
+        content: "*";
+        position: relative;
+        top: 2em;
+        color: red;
+        right: -25.6%;
+    }
 
 	@media (max-width: 62em) {
 		input, textarea {
 			width: 80%;
 		}
 	}
+}
+
+.addition {
+    color: white;
+    text-align: center;
+    margin: 0 10%;
+
+    .addition-title {
+        font-size: 1.3em;
+        color: $primary-orange;
+    }
+
+    button {
+        background-color: $primary-orange;
+        color: black !important;
+    }
+
+    .pure-form {
+        margin-top: 5px;
+    }
 }
