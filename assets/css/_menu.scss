@@ -63,6 +63,7 @@ $menu-mobile-font: 80px;
 
         @media (max-width: 62em) {
             float: none;
+            margin: 0;
 
             li:not(.logo) a:hover {
                 border-bottom: 0;
@@ -72,11 +73,6 @@ $menu-mobile-font: 80px;
                 font-size: $menu-mobile-font;
                 line-height: $menu-mobile-font;
             }
-
-            li.logo {
-                margin-left: 0;
-            }
-
 
             li.logo {
                 float: none;

@@ -175,14 +175,13 @@
       color: #2ebcdd; }
     @media (max-width: 62em) {
       #menu ul.topnav {
-        float: none; }
+        float: none;
+        margin: 0; }
         #menu ul.topnav li:not(.logo) a:hover {
           border-bottom: 0; }
         #menu ul.topnav li a {
           font-size: 80px;
           line-height: 80px; }
-        #menu ul.topnav li.logo {
-          margin-left: 0; }
         #menu ul.topnav li.logo {
           float: none;
           display: inline; }
