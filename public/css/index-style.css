@@ -941,6 +941,8 @@
     font-size: 1.3em;
     color: #f5b322;
     font-family: "SegoeUISemiBold"; }
+  .addition input {
+    color: #222 !important; }
   .addition input::-webkit-input-placeholder {
     color: #555; }
   .addition input:-moz-placeholder {

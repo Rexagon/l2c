@@ -39,7 +39,7 @@ router.post('/service', function(req, res) {
 	var email = req.body.email;
 
 	if (validateEmail(email)) {
-		var text = '<b>' + services[id] + '<b><br>Email: ' + email + '<br>';
+		var text = '<b>Как поможет ' + services[id] + '?</b><br>Email: ' + email.replace(htmlRegex, "") + '<br>';
 		mailer.sendMail({
             from: 'L2C mailer <mailer@live-to-create.com>',
             to: 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@rambler.ru',
@@ -64,7 +64,7 @@ router.post('/addition', function(req, res) {
 	var email = req.body.email;
 
 	if (validateEmail(email)) {
-		var text = 'Email: ' + email + '<br>';
+		var text = 'Не нашёл решение проблемы<br>Email: ' + email.replace(htmlRegex, "") + '<br>';
 		mailer.sendMail({
             from: 'L2C mailer <mailer@live-to-create.com>',
             to: 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@rambler.ru',
@@ -91,7 +91,7 @@ router.post('/application', function(req, res) {
 	var comment = req.body.comment;
 
 	if (validateEmail(email)) {
-		var text = 'Email: ' + email + '<br>Номер телефона: ' + phone + '<br>Комментарий: ' + comment + '<br>';
+		var text = 'Email: ' + email.replace(htmlRegex, "") + '<br>Номер телефона: ' + phone.replace(htmlRegex, "") + '<br>Комментарий: ' + comment.replace(htmlRegex, "") + '<br>';
 
 		mailer.sendMail({
             from: 'L2C mailer <mailer@live-to-create.com>',

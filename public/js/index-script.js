@@ -153,7 +153,9 @@ $(document).ready(function() {
     });
 
     $('#modal-send').click(function() {
-        this.disabled = true;
+        var button = this;
+        button.disabled = true;
+
         $.post('/service', {id: id, email: $('#modal-email').val()}, function(res) {
             if (res.err) {
                 if (res.err == 'sender') {
@@ -161,9 +163,12 @@ $(document).ready(function() {
                 } else {
                     alert('Укажите правильную почту.');
                 }
+            } else {
+                $('#modal-email').val('');
+                alert('Ожидайте ответа в ближайшее время.');
             }
 
-            this.removeAttribute("disabled");
+            button.disabled = false;
         });
     });
 
@@ -185,5 +190,47 @@ $(document).ready(function() {
         if (event.target == this) {
             closeModal();
         }
+    });
+
+    $('#addition-send').click(function() {
+        var button = this;
+        button.disabled = true;
+
+        $.post('/addition', {email: $('#addition-email').val()}, function(res) {
+            if (res.err) {
+                if (res.err == 'sender') {
+                    alert('Извините, произошла ошибка. Попробуйте ещё раз.')
+                } else {
+                    alert('Укажите правильную почту.');
+                }
+                button.disabled = false;
+            } else {
+                $('#addition-email').val('');
+                alert('Ожидайте ответа в ближайшее время.');
+            }
+        });
+    });
+
+    $('#send-application').click(function() {
+        var button = this;
+        button.disabled = true;
+
+        $.post('/application', {email: $('#email').val(), phone: $('#phone').val(), comment: $('#comment').val()}, function(res) {
+            if (res.err) {
+                if (res.err == 'sender') {
+                    alert('Извините, произошла ошибка. Попробуйте ещё раз.')
+                } else {
+                    alert('Укажите правильную почту.');
+                }
+                button.disabled = false;
+            } else {
+                $('#email').val('');
+                $('#phone').val('');
+                $('#comment').val('');
+                button.class = "pure-button pure-button-success";
+                button.innerHTML = 'ЗАЯВКА ОТПРАВЛЕНА';
+                alert('Ожидайте ответа в ближайшее время.');
+            }
+        });
     });
 });
