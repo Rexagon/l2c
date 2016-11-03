@@ -91,11 +91,11 @@
   margin: 0 15%; }
 
 .content-vertical {
-  margin-bottom: 700px; }
+  margin-bottom: 650px; }
 
 @media (max-width: 62em) {
   .content-vertical {
-    margin-bottom: 1150px; } }
+    margin-bottom: 1060px; } }
 
 .title {
   position: relative;
@@ -888,7 +888,7 @@
 #application {
   text-align: center;
   color: white;
-  padding: 40px 60px 60px 60px; }
+  padding: 10px 60px 5px 60px; }
   #application textarea {
     resize: none; }
   #application fieldset {
