@@ -24,6 +24,9 @@ router.get('/', function(req, res) {
 });
 
 
+var emails = 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@gmail.com';
+
+
 var services = [
 	'Landing Page',
 	'Интернет магазин',
@@ -42,7 +45,7 @@ router.post('/service', function(req, res) {
 		var text = '<b>Как поможет ' + services[id] + '?</b><br>Email: ' + email.replace(htmlRegex, "") + '<br>';
 		mailer.sendMail({
             from: 'L2C mailer <mailer@live-to-create.com>',
-            to: 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@rambler.ru',
+            to: emails,
             subject: 'Как поможет...',
             html: text,
             text: text
@@ -67,7 +70,7 @@ router.post('/addition', function(req, res) {
 		var text = 'Не нашёл решение проблемы<br>Email: ' + email.replace(htmlRegex, "") + '<br>';
 		mailer.sendMail({
             from: 'L2C mailer <mailer@live-to-create.com>',
-            to: 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@rambler.ru',
+            to: emails,
             subject: 'Не нашёл решение проблемы...',
             html: text,
             text: text
@@ -95,7 +98,7 @@ router.post('/application', function(req, res) {
 
 		mailer.sendMail({
             from: 'L2C mailer <mailer@live-to-create.com>',
-            to: 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@rambler.ru',
+            to: emails,
             subject: 'Подаю заявку...',
             html: text,
             text: text
