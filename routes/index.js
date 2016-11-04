@@ -24,7 +24,7 @@ router.get('/', function(req, res) {
 });
 
 
-var emails = 'reide740@gmail.com info@live-to-create.com info@live-to-create.ru avdeevfmx333@gmail.com';
+var emails = 'reide740@gmail.com, livetocreate@yandex.ru, info@live-to-create.com, info@live-to-create.ru, avdeevfmx333@gmail.com';
 
 
 var services = [
