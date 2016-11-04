@@ -49,8 +49,10 @@
     #block-footer .pure-u-1:first-child {
         margin-bottom: 2em;
     }
+    #block-footer {
+        position: relative!important;
+    }
 }
-
 
 #application {
     text-align: center;

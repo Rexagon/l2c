@@ -95,7 +95,7 @@
 
 @media (max-width: 62em) {
   .content-vertical {
-    margin-bottom: 1060px; } }
+    margin-bottom: 0; } }
 
 .title {
   position: relative;
@@ -883,7 +883,9 @@
   .footer-bottom {
     font-size: 1.3em; }
   #block-footer .pure-u-1:first-child {
-    margin-bottom: 2em; } }
+    margin-bottom: 2em; }
+  #block-footer {
+    position: relative !important; } }
 
 #application {
   text-align: center;
