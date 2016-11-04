@@ -236,7 +236,8 @@ $(document).ready(function() {
                 }
             } else {
                 $('#modal-email').val('');
-                alert('Ожидайте ответа в ближайшее время.');
+                alert('Заявка отправлена. Ожидайте ответа в ближайшее время.');
+                modal.hide();
             }
 
             button.disabled = false;
@@ -277,7 +278,7 @@ $(document).ready(function() {
                 button.disabled = false;
             } else {
                 $('#addition-email').val('');
-                alert('Ожидайте ответа в ближайшее время.');
+                alert('Заявка отправлена. Ожидайте ответа в ближайшее время.');
             }
         });
     });
@@ -300,7 +301,7 @@ $(document).ready(function() {
                 $('#comment').val('');
                 button.class = "pure-button pure-button-success";
                 button.innerHTML = 'ЗАЯВКА ОТПРАВЛЕНА';
-                alert('Ожидайте ответа в ближайшее время.');
+                alert('Заявка отправлена. Ожидайте ответа в ближайшее время.');
             }
         });
     });
