@@ -237,6 +237,7 @@ $(document).ready(function() {
             } else {
                 $('#modal-email').val('');
                 alert('Заявка отправлена. Ожидайте ответа в ближайшее время.');
+                $("body").removeClass("modal-open")
                 modal.hide();
             }
 
