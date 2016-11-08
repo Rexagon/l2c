@@ -309,9 +309,7 @@ $(document).ready(function() {
 
     if ($.inArray(window.location.hash, ['#landing', '#market', '#crm', '#documents', '#brending']) > -1) {
         $(window.location.hash).click();
-    } else if (window.location.hash == '#email' || window.location.hash == '#addition-email') {
-        $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top
-        }, 0);
+    } else if (window.location.hash == '#audit' || window.location.hash == '#addition-email') {
+        window.scrollTo(0,document.body.scrollHeight);
     }
 });
