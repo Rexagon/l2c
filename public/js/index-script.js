@@ -307,7 +307,7 @@ $(document).ready(function() {
         });
     });
 
-    if ($.inArray(window.location.hash, ['#landing', '#market', '#crm', '#documents', '#brending']) > -1) {
+    if ($.inArray(window.location.hash, ['#landing', '#market', '#crm', '#documents', '#brending', '#email']) > -1) {
         $(window.location.hash).click();
     }
 });
