@@ -306,4 +306,8 @@ $(document).ready(function() {
             }
         });
     });
+
+    if ($.inArray(window.location.hash, ['#landing', '#market', '#crm', '#documents', '#brending']) > -1) {
+        $(window.location.hash).click();
+    }
 });
