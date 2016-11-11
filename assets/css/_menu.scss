@@ -61,7 +61,7 @@ $menu-mobile-font: 80px;
             color: $primary-blue;
         }
 
-        @media (max-width: 62em) {
+        @media (max-width: 64em) {
             float: none;
             margin: 0;
 
@@ -107,7 +107,7 @@ $menu-mobile-font: 80px;
     }
 }
 
-@media (max-width: 62em) {
+@media (max-width: 64em) {
     #menu {
         height: auto;
     }

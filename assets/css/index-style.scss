@@ -19,7 +19,7 @@
     margin-bottom: 650px;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 64em) {
     .content-vertical {
         margin-bottom: 0;
     }
@@ -53,7 +53,7 @@
     left: 0;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 64em) {
     .content {
         margin: 0 2%;
     }
@@ -235,7 +235,7 @@
             font-size: 0.8em;
         }
     }
-    @media (max-width: 62em) {
+    @media (max-width: 64em) {
         .about-item.top .circle-inner:after {
             display: none;
         }
@@ -269,7 +269,7 @@
         }
     }
 
-    @media (max-width: 62em) {
+    @media (max-width: 64em) {
         #about-addition {
             font-size: 2em;
             padding: 0 5%;
@@ -413,7 +413,7 @@
         font-family: "SegoeUILight";
     }
         
-    @media (max-width: 62em) {
+    @media (max-width: 64em) {
         .text {
             font-size: 1.7em;
         }
@@ -509,7 +509,7 @@
         color: white;
     }
 
-    @media (max-width: 62em) {
+    @media (max-width: 64em) {
         .flip-container,
         .front,
         .back {
@@ -599,7 +599,7 @@
     animation-duration: 0.4s
 }
 
-@media (max-width: 62em) {
+@media (max-width: 64em) {
     .modal {
         padding-top: 20%;
     }
@@ -727,7 +727,7 @@
     -webkit-border-radius: 0px 2px 2px 0px;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 64em) {
     .modal-header {
         font-size: 2em;
     }

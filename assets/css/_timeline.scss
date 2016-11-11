@@ -15,7 +15,7 @@
 		background-color: white;
 	}
 
-	@media (min-width: 62em) {
+	@media (min-width: 64em) {
 		&::before {
 			left: 50%;
 			margin-left: -5px;
@@ -36,7 +36,7 @@
 		margin-bottom: 0;
 	}
 
-	@media (min-width: 62em) {
+	@media (min-width: 64em) {
 		margin: 4em 0;
 
 		&:first-child {
@@ -62,7 +62,7 @@
 	background-color: white;
 	text-align: center;
 
-	@media (min-width: 62em) {
+	@media (min-width: 64em) {
 		width: 60px;
 		height: 60px;
 		left: 50%;
@@ -118,7 +118,7 @@
 	}
 
 
-	@media (min-width: 62em) {
+	@media (min-width: 64em) {
 		margin-left: 0;
 		padding: 1.6em;
 		width: 37%;
